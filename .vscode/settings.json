@@ -17,6 +17,7 @@
         "DAY8.C": "cpp",
         "tatti.C": "cpp",
         "divide.C": "cpp",
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "loops.C": "cpp"
     }
 }
