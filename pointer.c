@@ -11,6 +11,18 @@ printf("%d",*c);
 return 0;
 }*/
 
+// #include <stdio.h>
+
+// int main() {
+//     int *ptr, x;
+//     x = 12;
+//     ptr = &x; // Assign the address of x to ptr
+//     printf("%d", *ptr); // Dereference ptr to print the value of x
+
+//     return 0;
+// }
+
+
 // Pointer by function
 
 /*#include<stdio.h>
@@ -33,6 +45,7 @@ int t=*a;
 *a=*b;
 *b=t;
 }*/
+/*
 #include <stdio.h>
 struct my_struct
 {
@@ -57,7 +70,7 @@ int main()
         scanf("%d", &ob[x].ph);
     }
 
-    /*
+    
     ob.a=98;
     ob.b=76;
     ob.c=ob.a+ob.b;
@@ -67,7 +80,17 @@ int main()
     ob1.b=65;
     ob1.c=ob1.a*ob1.b;
     printf("\n%d",ob1.c);
-    */
+    
 
+    return 0;
+}*/
+
+#include <stdio.h>
+int main()
+{
+    int a = 80;
+    int *ptr = (int *)malloc(sizeof(int));
+    ptr = &a;
+    free(ptr);
     return 0;
 }

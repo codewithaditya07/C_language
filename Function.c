@@ -27,6 +27,17 @@ printf("\n");
 }
 
 }*/
+
+// #include <stdio.h>
+
+// int main() {
+//     char str[50];
+//     printf("Enter a string: ");
+//     fgets(str, sizeof(str), stdin);
+//     printf("You entered: %s", str);
+//     return 0;
+// }
+
 //Non Return Non Parametric
 /*
 #include<stdio.h>
@@ -86,18 +97,34 @@ return a+b;
 }*/
 //Return type function
 
-#include<stdio.h>
-int main()
-{
-int n;
+// #include<stdio.h>
+// int main()
+// {
+// int n;
 
 
-n=kk(12,21);
-printf("%d",n);
-return 0;
-}
-//Return Type Parametric function
-int kk(int a, int b)
-{
-return(a*a+b*b+2*a*b);
-}
+// n=kk(12,21);
+// printf("%d",n);
+// return 0;
+// }
+// //Return Type Parametric function
+// int kk(int a, int b)
+// {
+// return(a*a+b*b+2*a*b);
+// }
+
+// #include <stdio.h>
+ 
+// int func()
+// {
+//     int a, b;
+//     scanf("%d", &a);
+//     scanf("%d", &b);
+//     return a + b;
+// }
+ 
+// int main()
+// {
+//     int ans = func();
+//     printf("%d", ans);
+// }
