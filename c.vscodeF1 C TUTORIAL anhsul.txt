@@ -1,1 +1,0 @@
-cd "c:\LANGUAGE'S BY ADI#\F1 C TUTORIAL\" ; if ($?) { gcc file.c -o file } ; if ($?) { .\file }

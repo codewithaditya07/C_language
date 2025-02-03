@@ -11,20 +11,21 @@ int main()
     }
     return 0;
 }*/
-//REVERSE NUMBER IN WHILE LOOP
-#include<stdio.h>
-int main (){
+// REVERSE NUMBER IN WHILE LOOP
+#include <stdio.h>
+int main()
+{
 
-int x,y,r,s=0;
+    int x, y, r, s = 0;
     printf("enter any value ");
-    scanf("%d",&x);
-    y=x;
-    while(y>0)
+    scanf("%d", &x);
+    y = x;
+    while (y > 0)
     {
-        r=y%10;
-        s=s*10+r;
-        y=y/10;
+        r = y % 10;
+        s = s * 10 + r;
+        y = y / 10;
     }
-    printf("%d",s);
-    return 0 ;
+    printf("%d", s);
+    return 0;
 }

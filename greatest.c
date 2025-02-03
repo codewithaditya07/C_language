@@ -38,38 +38,38 @@ int main()
  {
      printf("the greatest number= f\n");
  }*/
-// find lowest number
+    // find lowest number
     if (a < b && a < c && a < d && a < e && a < f)
     {
         printf("the lowest number is A\n");
     }
     else
-    
-     if (b < a && b < c && b < d && b < e && d < f)
+
+        if (b < a && b < c && b < d && b < e && d < f)
     {
         printf("the lowest number is B\n");
     }
     else
-    
-     if (c < a && c < b && c < d && c < e && c < f)
+
+        if (c < a && c < b && c < d && c < e && c < f)
     {
         printf(" the lowest number is C\n");
     }
     else
-    
-     if (d < a && d < b && d < c && d < e && d < f)
+
+        if (d < a && d < b && d < c && d < e && d < f)
     {
         printf("the lowest number is D\n");
     }
     else
-    
-     if (e < a && e < b && e < c && e < d && e < f)
+
+        if (e < a && e < b && e < c && e < d && e < f)
     {
         printf("the lowest number is E\n");
     }
     else
-    
-     if (f < a && f < b && f < c && f < d && f < e)
+
+        if (f < a && f < b && f < c && f < d && f < e)
     {
         printf("the lowest number is F\n");
     }
