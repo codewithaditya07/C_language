@@ -13,7 +13,7 @@ for (y=3;y<=x;y++)
     z=a;
     a=b;
     b=z+a;
-    printf("%d ,",b);
+    printf("%d,",b);
     
 }
 
