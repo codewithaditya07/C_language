@@ -60,19 +60,19 @@
 //     return 0;
 // }
 
-#include <stdio.h>
+// #include <stdio.h>
 
-#define CUBE(x) ((x) * (x) * (x))
+// #define CUBE(x) ((x) * (x) * (x))
 
-int main() {
-    int num = 3;
-    printf("Cube of %d is %d\n", num, CUBE(num));  // Output: 27
+// int main() {
+//     int num = 3;
+//     printf("Cube of %d is %d\n", num, CUBE(num));  // Output: 27
 
-    // Test with expression
-    printf("Cube of (2 + 1) is %d\n", CUBE(2 + 1)); // Output: 27
+//     // Test with expression
+//     printf("Cube of (2 + 1) is %d\n", CUBE(2 + 1)); // Output: 27
 
-    return 0;
-}
+//     return 0;
+// }
 
 
 // #include <stdio.h>
@@ -117,3 +117,38 @@ int main() {
 
 //     return 0;
 // }
+
+
+#include <stdio.h>
+
+int main() {
+    int array[10];
+    int i, value, found = 0;
+
+    printf("Enter 10 integer values:\n");
+    for(i = 0; i < 10; i++) {
+        scanf("%d", &array[i]);
+    }
+
+    // Reading the value to search
+    printf("Enter a value to search: ");
+    scanf("%d", &value);
+
+    // Searching the value in the array
+    for(i = 0; i < 10; i++) {
+        if(array[i] == value) {
+            found = 1;
+            break;
+        }
+    }
+
+    // Output based on search result
+    if(found) {
+        printf("Square of %d is %d\n", value, value * value);
+    } else {
+        printf("The value is missing.\n");
+    }
+
+    return 0;
+}
+
