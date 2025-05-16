@@ -118,37 +118,100 @@
 //     return 0;
 // }
 
+// Write a C program which read an array of ten integer values and search a given value in the array. If that value exist in the array
+// display its square otherwise display. “The value is missing.”
 
-#include <stdio.h>
+// #include <stdio.h>
 
-int main() {
-    int array[10];
-    int i, value, found = 0;
+// int main() {
+//     int array[10];
+//     int i, value, found = 0;
 
-    printf("Enter 10 integer values:\n");
-    for(i = 0; i < 10; i++) {
-        scanf("%d", &array[i]);
-    }
+//     printf("Enter 10 integer values:\n");
+//     for(i = 0; i < 10; i++) {
+//         scanf("%d", &array[i]);
+//     }
 
-    // Reading the value to search
-    printf("Enter a value to search: ");
-    scanf("%d", &value);
+//     // Reading the value to search
+//     printf("Enter a value to search: ");
+//     scanf("%d", &value);
 
-    // Searching the value in the array
-    for(i = 0; i < 10; i++) {
-        if(array[i] == value) {
-            found = 1;
-            break;
-        }
-    }
+//     // Searching the value in the array
+//     for(i = 0; i < 10; i++) {
+//         if(array[i] == value) {
+//             found = 1;
+//             break;
+//         }
+//     }
 
-    // Output based on search result
-    if(found) {
-        printf("Square of %d is %d\n", value, value * value);
-    } else {
-        printf("The value is missing.\n");
-    }
+//     // Output based on search result
+//     if(found) {
+//         printf("Square of %d is %d\n", value, value * value);
+//     } else {
+//         printf("The value is missing.\n");
+//     }
 
-    return 0;
-}
+//     return 0;
+// }
 
+
+// Write a C program for multiplication of two 4 × 4 matrices
+// #include <stdio.h>
+
+// #define SIZE 4
+
+// int main() {
+//     int A[SIZE][SIZE], B[SIZE][SIZE], result[SIZE][SIZE];
+//     int i, j, k;
+
+//     // Input first matrix
+//     printf("Enter elements of first 4x4 matrix:\n");
+//     for(i = 0; i < SIZE; i++) {
+//         for(j = 0; j < SIZE; j++) {
+//             printf("A[%d][%d]: ", i, j);
+//             scanf("%d", &A[i][j]);
+//         }
+//     }
+
+//     // Input second matrix
+//     printf("\nEnter elements of second 4x4 matrix:\n");
+//     for(i = 0; i < SIZE; i++) {
+//         for(j = 0; j < SIZE; j++) {
+//             printf("B[%d][%d]: ", i, j);
+//             scanf("%d", &B[i][j]);
+//         }
+//     }
+
+//     // Initialize result matrix to 0
+//     for(i = 0; i < SIZE; i++) {
+//         for(j = 0; j < SIZE; j++) {
+//             result[i][j] = 0;
+//         }
+//     }
+
+//     // Matrix multiplication
+//     for(i = 0; i < SIZE; i++) {
+//         for(j = 0; j < SIZE; j++) {
+//             for(k = 0; k < SIZE; k++) {
+//                 result[i][j] += A[i][k] * B[k][j];
+//             }
+//         }
+//     }
+
+//     // Display result matrix
+//     printf("\nResult of multiplication:\n");
+//     for(i = 0; i < SIZE; i++) {
+//         for(j = 0; j < SIZE; j++) {
+//             printf("%5d ", result[i][j]);
+//         }
+//         printf("\n");
+//     }
+
+//     return 0;
+// }
+
+.
+
+.
+.
+.
