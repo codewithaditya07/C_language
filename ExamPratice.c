@@ -210,8 +210,41 @@
 //     return 0;
 // }
 
-.
+// Write a program and flowchart to display
+// the following pattern in c :
+// H
+// He
+// HeL
+// HeLL
+// HeLLO
+// HeLL
+// HeL
+// He
+// H
 
-.
-.
-.
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char word[] = "HeLLO";
+    int len = strlen(word);
+
+    // Print top half including the full word
+    for (int i = 1; i <= len; i++) {
+        for (int j = 0; j < i; j++) {
+            printf("%c", word[j]);
+        }
+        printf("\n");
+    }
+
+    // Print bottom half
+    for (int i = len - 1; i >= 1; i--) {
+        for (int j = 0; j < i; j++) {
+            printf("%c", word[j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
