@@ -222,29 +222,93 @@
 // He
 // H
 
+// #include <stdio.h>
+// #include <string.h>
+
+// int main() {
+//     char word[] = "HeLLO";
+//     int len = strlen(word);
+
+//     // Print top half including the full word
+//     for (int i = 1; i <= len; i++) {
+//         for (int j = 0; j < i; j++) {
+//             printf("%c", word[j]);
+//         }
+//         printf("\n");
+//     }
+
+//     // Print bottom half
+//     for (int i = len - 1; i >= 1; i--) {
+//         for (int j = 0; j < i; j++) {
+//             printf("%c", word[j]);
+//         }
+//         printf("\n");
+//     }
+
+//     return 0;
+// }
+
+// Write a program to search an element in a
+// given list of elements using linear search.
+
+// #include <stdio.h>
+
+// int main() {
+//     int arr[100], n, i, key, found = 0;
+
+//     // Input: number of elements
+//     printf("Enter number of elements: ");
+//     scanf("%d", &n);
+
+//     // Input: elements of array
+//     printf("Enter %d elements:\n", n);
+//     for (i = 0; i < n; i++) {
+//         scanf("%d", &arr[i]);
+//     }
+
+//     // Input: element to search
+//     printf("Enter the element to search: ");
+//     scanf("%d", &key);
+
+//     // Linear Search
+//     for (i = 0; i < n; i++) {
+//         if (arr[i] == key) {
+//             printf("Element found at position %d.\n", i + 1); // 1-based index
+//             found = 1;
+//             break;
+//         }
+//     }
+
+//     if (!found) {
+//         printf("Element not found in the list.\n");
+//     }
+
+//     return 0;
+// }
+
+// Write a macro to display the string COBOL
+// in the following pattern.
+// C
+// CO
+// COB
+// COBO
+// COBOL
 #include <stdio.h>
 #include <string.h>
 
+#define DISPLAY_COBOL_PATTERN()                  \
+    do {                                         \
+        char str[] = "COBOL";                    \
+        for (int i = 1; i <= strlen(str); i++) { \
+            for (int j = 0; j < i; j++) {        \
+                printf("%c", str[j]);            \
+            }                                    \
+            printf("\n");                        \
+        }                                        \
+    } while (0)
+
 int main() {
-    char word[] = "HeLLO";
-    int len = strlen(word);
-
-    // Print top half including the full word
-    for (int i = 1; i <= len; i++) {
-        for (int j = 0; j < i; j++) {
-            printf("%c", word[j]);
-        }
-        printf("\n");
-    }
-
-    // Print bottom half
-    for (int i = len - 1; i >= 1; i--) {
-        for (int j = 0; j < i; j++) {
-            printf("%c", word[j]);
-        }
-        printf("\n");
-    }
-
+    DISPLAY_COBOL_PATTERN();
     return 0;
 }
 
