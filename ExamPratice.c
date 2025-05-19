@@ -293,22 +293,80 @@
 // COB
 // COBO
 // COBOL
+// #include <stdio.h>
+// #include <string.h>
+
+// #define DISPLAY_COBOL_PATTERN()                  \
+//     do {                                         \
+//         char str[] = "COBOL";                    \
+//         for (int i = 1; i <= strlen(str); i++) { \
+//             for (int j = 0; j < i; j++) {        \
+//                 printf("%c", str[j]);            \
+//             }                                    \
+//             printf("\n");                        \
+//         }                                        \
+//     } while (0)
+
+// int main() {
+//     DISPLAY_COBOL_PATTERN();
+//     return 0;
+// }
+
+
+// Write a program in C, using structures to 7 generate a report for students which
+// displays Roll No. and Name of student, total marks obtained by the student. Assumptions
+// can be made wherever necessary.
+
 #include <stdio.h>
 #include <string.h>
 
-#define DISPLAY_COBOL_PATTERN()                  \
-    do {                                         \
-        char str[] = "COBOL";                    \
-        for (int i = 1; i <= strlen(str); i++) { \
-            for (int j = 0; j < i; j++) {        \
-                printf("%c", str[j]);            \
-            }                                    \
-            printf("\n");                        \
-        }                                        \
-    } while (0)
+#define MAX 100
+
+// Structure definition
+struct Student {
+    int rollNo;
+    char name[50];
+    int marks[3];  // Assuming 3 subjects
+};
+
+// Function to calculate total marks
+int calculateTotal(struct Student s) {
+    int total = 0;
+    for (int i = 0; i < 3; i++) {
+        total += s.marks[i];
+    }
+    return total;
+}
 
 int main() {
-    DISPLAY_COBOL_PATTERN();
+    struct Student students[MAX];
+    int n;
+
+    printf("Enter number of students: ");
+    scanf("%d", &n);
+
+    for (int i = 0; i < n; i++) {
+        printf("\nEnter details for student %d:\n", i + 1);
+        printf("Roll Number: ");
+        scanf("%d", &students[i].rollNo);
+        printf("Name: ");
+        scanf(" %[^\n]", students[i].name); // Read string with spaces
+
+        for (int j = 0; j < 3; j++) {
+            printf("Marks in subject %d: ", j + 1);
+            scanf("%d", &students[i].marks[j]);
+        }
+    }
+
+    // Display report
+    printf("\n--- Student Report ---\n");
+    printf("Roll No\tName\t\tTotal Marks\n");
+
+    for (int i = 0; i < n; i++) {
+        int total = calculateTotal(students[i]);
+        printf("%d\t%-15s%d\n", students[i].rollNo, students[i].name, total);
+    }
+
     return 0;
 }
 
