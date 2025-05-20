@@ -317,56 +317,72 @@
 // displays Roll No. and Name of student, total marks obtained by the student. Assumptions
 // can be made wherever necessary.
 
+// #include <stdio.h>
+// #include <string.h>
+
+// #define MAX 100
+
+// // Structure definition
+// struct Student {
+//     int rollNo;
+//     char name[50];
+//     int marks[3];  // Assuming 3 subjects
+// };
+
+// // Function to calculate total marks
+// int calculateTotal(struct Student s) {
+//     int total = 0;
+//     for (int i = 0; i < 3; i++) {
+//         total += s.marks[i];
+//     }
+//     return total;
+// }
+
+// int main() {
+//     struct Student students[MAX];
+//     int n;
+
+//     printf("Enter number of students: ");
+//     scanf("%d", &n);
+
+//     for (int i = 0; i < n; i++) {
+//         printf("\nEnter details for student %d:\n", i + 1);
+//         printf("Roll Number: ");
+//         scanf("%d", &students[i].rollNo);
+//         printf("Name: ");
+//         scanf(" %[^\n]", students[i].name); // Read string with spaces
+
+//         for (int j = 0; j < 3; j++) {
+//             printf("Marks in subject %d: ", j + 1);
+//             scanf("%d", &students[i].marks[j]);
+//         }
+//     }
+
+//     // Display report
+//     printf("\n--- Student Report ---\n");
+//     printf("Roll No\tName\t\tTotal Marks\n");
+
+//     for (int i = 0; i < n; i++) {
+//         int total = calculateTotal(students[i]);
+//         printf("%d\t%-15s%d\n", students[i].rollNo, students[i].name, total);
+//     }
+
+//     return 0;
+// }
+
+// Write a program that initialises 3 names in
+// an array of strings and displays them.
+
 #include <stdio.h>
-#include <string.h>
-
-#define MAX 100
-
-// Structure definition
-struct Student {
-    int rollNo;
-    char name[50];
-    int marks[3];  // Assuming 3 subjects
-};
-
-// Function to calculate total marks
-int calculateTotal(struct Student s) {
-    int total = 0;
-    for (int i = 0; i < 3; i++) {
-        total += s.marks[i];
-    }
-    return total;
-}
 
 int main() {
-    struct Student students[MAX];
-    int n;
+    // Initialize an array of 3 strings (names)
+    char names[3][20] = {"Alice", "Bob", "Charlie"};
 
-    printf("Enter number of students: ");
-    scanf("%d", &n);
-
-    for (int i = 0; i < n; i++) {
-        printf("\nEnter details for student %d:\n", i + 1);
-        printf("Roll Number: ");
-        scanf("%d", &students[i].rollNo);
-        printf("Name: ");
-        scanf(" %[^\n]", students[i].name); // Read string with spaces
-
-        for (int j = 0; j < 3; j++) {
-            printf("Marks in subject %d: ", j + 1);
-            scanf("%d", &students[i].marks[j]);
-        }
-    }
-
-    // Display report
-    printf("\n--- Student Report ---\n");
-    printf("Roll No\tName\t\tTotal Marks\n");
-
-    for (int i = 0; i < n; i++) {
-        int total = calculateTotal(students[i]);
-        printf("%d\t%-15s%d\n", students[i].rollNo, students[i].name, total);
+    // Display the names
+    for (int i = 0; i < 3; i++) {
+        printf("%s\n", names[i]);
     }
 
     return 0;
 }
-
