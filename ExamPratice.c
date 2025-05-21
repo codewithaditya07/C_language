@@ -373,16 +373,55 @@
 // Write a program that initialises 3 names in
 // an array of strings and displays them.
 
+// #include <stdio.h>
+
+// int main() {
+//     // Initialize an array of 3 strings (names)
+//     char names[3][20] = {"Alice", "Bob", "Charlie"};
+
+//     // Display the names
+//     for (int i = 0; i < 3; i++) {
+//         printf("%s\n", names[i]);
+//     }
+
+//     return 0;
+// }
+
+// Write a C program to find the largest and the smallest numbers in a given single
+// dimensional array of "n" numerical values.
 #include <stdio.h>
 
 int main() {
-    // Initialize an array of 3 strings (names)
-    char names[3][20] = {"Alice", "Bob", "Charlie"};
+    int n, i;
+    int arr[100]; // assuming max size is 100
+    int largest, smallest;
 
-    // Display the names
-    for (int i = 0; i < 3; i++) {
-        printf("%s\n", names[i]);
+    // Input array size
+    printf("Enter the number of elements in the array: ");
+    scanf("%d", &n);
+
+    // Input array elements
+    printf("Enter %d elements:\n", n);
+    for(i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
     }
+
+    // Initialize largest and smallest
+    largest = smallest = arr[0];
+
+    // Loop to find largest and smallest
+    for(i = 1; i < n; i++) {
+        if(arr[i] > largest) {
+            largest = arr[i];
+        }
+        if(arr[i] < smallest) {
+            smallest = arr[i];
+        }
+    }
+
+    // Output results
+    printf("Largest number: %d\n", largest);
+    printf("Smallest number: %d\n", smallest);
 
     return 0;
 }
