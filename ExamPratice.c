@@ -389,39 +389,97 @@
 
 // Write a C program to find the largest and the smallest numbers in a given single
 // dimensional array of "n" numerical values.
+// #include <stdio.h>
+
+// int main() {
+//     int n, i;
+//     int arr[100]; // assuming max size is 100
+//     int largest, smallest;
+
+//     // Input array size
+//     printf("Enter the number of elements in the array: ");
+//     scanf("%d", &n);
+
+//     // Input array elements
+//     printf("Enter %d elements:\n", n);
+//     for(i = 0; i < n; i++) {
+//         scanf("%d", &arr[i]);
+//     }
+
+//     // Initialize largest and smallest
+//     largest = smallest = arr[0];
+
+//     // Loop to find largest and smallest
+//     for(i = 1; i < n; i++) {
+//         if(arr[i] > largest) {
+//             largest = arr[i];
+//         }
+//         if(arr[i] < smallest) {
+//             smallest = arr[i];
+//         }
+//     }
+
+//     // Output results
+//     printf("Largest number: %d\n", largest);
+//     printf("Smallest number: %d\n", smallest);
+
+//     return 0;
+// }
+
+
+// What is a string ? Write a function in C to 10 convert lower case letters to upper case
+// letters in a given string without using strupp ?
+
+// #include <stdio.h>
+
+// void toUpperCase(char str[]) {
+//     int i = 0;
+//     while (str[i] != '\0') {
+//         if (str[i] >= 'a' && str[i] <= 'z') {
+//             str[i] = str[i] - 32; // Convert to uppercase by subtracting 32
+//         }
+//         i++;
+//     }
+// }
+
+// int main() {
+//     char str[100];
+
+//     printf("Enter a string: ");
+//     gets(str);  // Use fgets() instead of gets() in modern code for safety
+
+//     toUpperCase(str);
+
+//     printf("Uppercase string: %s\n", str);
+
+//     return 0;
+// }
+
+// Write a 'C' program that will enter a line of 10 text, store it in an array and then display
+// backwards. The length of the line should be undefined (being terminated by ENTER key), but less than 80 characters
+
 #include <stdio.h>
+#include <string.h>
 
 int main() {
-    int n, i;
-    int arr[100]; // assuming max size is 100
-    int largest, smallest;
+    char str[80];  // array to store the string (max 79 characters + '\0')
+    int i;
 
-    // Input array size
-    printf("Enter the number of elements in the array: ");
-    scanf("%d", &n);
+    printf("Enter a line of text (less than 80 characters): ");
+    fgets(str, sizeof(str), stdin);  // read input including spaces
 
-    // Input array elements
-    printf("Enter %d elements:\n", n);
-    for(i = 0; i < n; i++) {
-        scanf("%d", &arr[i]);
+    // Remove the newline character at the end if present
+    int len = strlen(str);
+    if (str[len - 1] == '\n') {
+        str[len - 1] = '\0';
+        len--;
     }
 
-    // Initialize largest and smallest
-    largest = smallest = arr[0];
-
-    // Loop to find largest and smallest
-    for(i = 1; i < n; i++) {
-        if(arr[i] > largest) {
-            largest = arr[i];
-        }
-        if(arr[i] < smallest) {
-            smallest = arr[i];
-        }
+    printf("Text in reverse: ");
+    for (i = len - 1; i >= 0; i--) {
+        putchar(str[i]);
     }
 
-    // Output results
-    printf("Largest number: %d\n", largest);
-    printf("Smallest number: %d\n", smallest);
-
+    printf("\n");
     return 0;
 }
