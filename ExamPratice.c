@@ -458,28 +458,67 @@
 // Write a 'C' program that will enter a line of 10 text, store it in an array and then display
 // backwards. The length of the line should be undefined (being terminated by ENTER key), but less than 80 characters
 
+// #include <stdio.h>
+// #include <string.h>
+
+// int main() {
+//     char str[80];  // array to store the string (max 79 characters + '\0')
+//     int i;
+
+//     printf("Enter a line of text (less than 80 characters): ");
+//     fgets(str, sizeof(str), stdin);  // read input including spaces
+
+//     // Remove the newline character at the end if present
+//     int len = strlen(str);
+//     if (str[len - 1] == '\n') {
+//         str[len - 1] = '\0';
+//         len--;
+//     }
+
+//     printf("Text in reverse: ");
+//     for (i = len - 1; i >= 0; i--) {
+//         putchar(str[i]);
+//     }
+
+//     printf("\n");
+//     return 0;
+// }
+
+// Explain recursion program with a suitable example.
+
+// #include <stdio.h>
+
+// // Recursive function to calculate factorial
+// int factorial(int n) {
+//     if (n == 0) {
+//         return 1; // base case
+//     } else {
+//         return n * factorial(n - 1); // recursive call
+//     }
+// }
+
+// int main() {
+//     int num;
+//     printf("Enter a number: ");
+//     scanf("%d", &num);
+
+//     int result = factorial(num);
+//     printf("Factorial of %d is %d\n", num, result);
+
+//     return 0;
+// }
+
+// Macro Program Using #define, #if, #else
 #include <stdio.h>
-#include <string.h>
+
+#define VALUE 10
 
 int main() {
-    char str[80];  // array to store the string (max 79 characters + '\0')
-    int i;
+    #if VALUE > 5
+        printf("VALUE is greater than 5\n");
+    #else
+        printf("VALUE is 5 or less\n");
+    #endif
 
-    printf("Enter a line of text (less than 80 characters): ");
-    fgets(str, sizeof(str), stdin);  // read input including spaces
-
-    // Remove the newline character at the end if present
-    int len = strlen(str);
-    if (str[len - 1] == '\n') {
-        str[len - 1] = '\0';
-        len--;
-    }
-
-    printf("Text in reverse: ");
-    for (i = len - 1; i >= 0; i--) {
-        putchar(str[i]);
-    }
-
-    printf("\n");
     return 0;
 }
