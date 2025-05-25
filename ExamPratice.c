@@ -509,16 +509,38 @@
 // }
 
 // Macro Program Using #define, #if, #else
+// #include <stdio.h>
+
+// #define VALUE 10
+
+// int main() {
+//     #if VALUE > 5
+//         printf("VALUE is greater than 5\n");
+//     #else
+//         printf("VALUE is 5 or less\n");
+//     #endif
+
+//     return 0;
+// }
+
+// What is pointer-to-pointer ? Explain the need of pointer-to-pointer with an example.
+// Also show how the address of variable in this case is calculated and determined
 #include <stdio.h>
 
-#define VALUE 10
-
 int main() {
-    #if VALUE > 5
-        printf("VALUE is greater than 5\n");
-    #else
-        printf("VALUE is 5 or less\n");
-    #endif
+    int a = 5;
 
+    int *p = &a;      // p points to a
+    int **pp = &p;    // pp points to p
+
+    printf("Value of a = %d\n", a);
+    printf("Value of a using *p = %d\n", *p);
+    printf("Value of a using **pp = %d\n", **pp);
+
+    printf("Address of a = %p\n", (void*)&a);
+    printf("Address stored in p = %p\n", (void*)p);
+    printf("Address of p = %p\n", (void*)&p);
+    printf("Address stored in pp = %p\n", (void*)pp);
+    
     return 0;
 }
