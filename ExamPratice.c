@@ -546,17 +546,51 @@
 // }
 
 // Explain briefly null pointer assignment. 6 Write a program in C to illustrate this concept.
+// #include <stdio.h>
+
+// int main() {
+//     int *ptr = NULL;
+
+//     if (ptr != NULL) {
+//         printf("Value at ptr: %d\n", *ptr);
+//     } else {
+//         printf("Pointer is NULL. Cannot dereference.\n");
+//     }
+
+//     return 0;
+// }
+
+// Write a program to concatenate two strings without using the strcat( ) function.
 #include <stdio.h>
 
 int main() {
-    int *ptr = NULL;
+    char str1[100], str2[50];
+    int i = 0, j = 0;
 
-    if (ptr != NULL) {
-        printf("Value at ptr: %d\n", *ptr);
-    } else {
-        printf("Pointer is NULL. Cannot dereference.\n");
+    // Input the two strings
+    printf("Enter the first string: ");
+    gets(str1);  // Warning: gets() is unsafe, use fgets() in real applications
+
+    printf("Enter the second string: ");
+    gets(str2);
+
+    // Move to the end of str1
+    while (str1[i] != '\0') {
+        i++;
     }
+
+    // Copy str2 to the end of str1
+    while (str2[j] != '\0') {
+        str1[i] = str2[j];
+        i++;
+        j++;
+    }
+
+    // Null-terminate the result
+    str1[i] = '\0';
+
+    // Print the concatenated string
+    printf("Concatenated string: %s\n", str1);
 
     return 0;
 }
-
