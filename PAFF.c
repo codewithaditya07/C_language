@@ -1,5 +1,5 @@
 // prime number in while loop
-/*#include <stdio.h>
+#include <stdio.h>
 int main()
 {
     int x, a, f = 0;
@@ -27,7 +27,7 @@ int main()
         a++;
     }
     return 0;
-}*/
+}
 // ARMSTRONG NUMBER IN WHILE LOOP
 /*#include<stdio.h>
 int main (){
@@ -77,25 +77,25 @@ int main()
 
 }*/
 // factorial
-#include <stdio.h>
-int main()
-{
-    int x, y, f = 1;
+// #include <stdio.h>
+// int main()
+// {
+//     int x, y, f = 1;
 
-    printf("enter any number ");
-    scanf("%d", &x);
-    y = x;
-    while (y > 0)
-    {
-        if (y == 1)
-            printf("%d ", y);
-        else
-            printf("%d *", y);
+//     printf("enter any number ");
+//     scanf("%d", &x);
+//     y = x;
+//     while (y > 0)
+//     {
+//         if (y == 1)
+//             printf("%d ", y);
+//         else
+//             printf("%d *", y);
 
-        f = f * y;
-        y--;
-    }
-    printf("= %d", f);
+//         f = f * y;
+//         y--;
+//     }
+//     printf("= %d", f);
 
-    return 0;
-}
+//     return 0;
+// }

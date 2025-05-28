@@ -561,36 +561,65 @@
 // }
 
 // Write a program to concatenate two strings without using the strcat( ) function.
+// #include <stdio.h>
+
+// int main() {
+//     char str1[100], str2[50];
+//     int i = 0, j = 0;
+
+//     // Input the two strings
+//     printf("Enter the first string: ");
+//     gets(str1);  // Warning: gets() is unsafe, use fgets() in real applications
+
+//     printf("Enter the second string: ");
+//     gets(str2);
+
+//     // Move to the end of str1
+//     while (str1[i] != '\0') {
+//         i++;
+//     }
+
+//     // Copy str2 to the end of str1
+//     while (str2[j] != '\0') {
+//         str1[i] = str2[j];
+//         i++;
+//         j++;
+//     }
+
+//     // Null-terminate the result
+//     str1[i] = '\0';
+
+//     // Print the concatenated string
+//     printf("Concatenated string: %s\n", str1);
+
+//     return 0;
+// }
+
+// prime no
 #include <stdio.h>
 
 int main() {
-    char str1[100], str2[50];
-    int i = 0, j = 0;
+    int x, a, f = 0;
 
-    // Input the two strings
-    printf("Enter the first string: ");
-    gets(str1);  // Warning: gets() is unsafe, use fgets() in real applications
+    printf("Enter any number: ");
+    scanf("%d", &x);
 
-    printf("Enter the second string: ");
-    gets(str2);
-
-    // Move to the end of str1
-    while (str1[i] != '\0') {
-        i++;
+    if (x <= 1) {
+        printf("Not prime\n");
+        return 0;
     }
 
-    // Copy str2 to the end of str1
-    while (str2[j] != '\0') {
-        str1[i] = str2[j];
-        i++;
-        j++;
+    for (a = 2; a <= x / 2; a++) {
+        if (x % a == 0) {
+            f = 1;
+            break;
+        }
     }
 
-    // Null-terminate the result
-    str1[i] = '\0';
-
-    // Print the concatenated string
-    printf("Concatenated string: %s\n", str1);
+    if (f == 0)
+        printf("It is prime\n");
+    else
+        printf("It is not prime\n");
 
     return 0;
 }
