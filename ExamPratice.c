@@ -596,30 +596,93 @@
 // }
 
 // prime no
+// #include <stdio.h>
+
+// int main() {
+//     int x, a, f = 0;
+
+//     printf("Enter any number: ");
+//     scanf("%d", &x);
+
+//     if (x <= 1) {
+//         printf("Not prime\n");
+//         return 0;
+//     }
+
+//     for (a = 2; a <= x / 2; a++) {
+//         if (x % a == 0) {
+//             f = 1;
+//             break;
+//         }
+//     }
+
+//     if (f == 0)
+//         printf("It is prime\n");
+//     else
+//         printf("It is not prime\n");
+
+//     return 0;
+// }
+
+// What is recursion ? Write a recursive 5 C program to find the factorial of a given number.
+// #include <stdio.h>
+
+// // Recursive function to calculate factorial
+// int factorial(int n) {
+//     if (n == 0 || n == 1)
+//         return 1; // Base case
+//     else
+//         return n * factorial(n - 1); // Recursive call
+// }
+
+// int main() {
+//     int num;
+//     printf("Enter a number: ");
+//     scanf("%d", &num);
+
+//     if (num < 0)
+//         printf("Factorial is not defined for negative numbers.\n");
+//     else
+//         printf("Factorial of %d is %d\n", num, factorial(num));
+
+//     return 0;
+// }
+
+// What is a structure ? Explain how a 10 structure is declared in C. Write a program
+// in C using structure to store records of students in a class of 20 students.
+
 #include <stdio.h>
 
+#define SIZE 20
+
+// Define the structure
+struct Student {
+    int roll;
+    char name[50];
+    float marks;
+};
+
 int main() {
-    int x, a, f = 0;
+    struct Student students[SIZE];
 
-    printf("Enter any number: ");
-    scanf("%d", &x);
-
-    if (x <= 1) {
-        printf("Not prime\n");
-        return 0;
+    // Input student details
+    printf("Enter details of %d students:\n", SIZE);
+    for (int i = 0; i < SIZE; i++) {
+        printf("\nStudent %d:\n", i + 1);
+        printf("Enter roll number: ");
+        scanf("%d", &students[i].roll);
+        printf("Enter name: ");
+        scanf(" %[^\n]", students[i].name);  // Read string with spaces
+        printf("Enter marks: ");
+        scanf("%f", &students[i].marks);
     }
 
-    for (a = 2; a <= x / 2; a++) {
-        if (x % a == 0) {
-            f = 1;
-            break;
-        }
+    // Display student details
+    printf("\n---- Student Records ----\n");
+    for (int i = 0; i < SIZE; i++) {
+        printf("Roll: %d, Name: %s, Marks: %.2f\n", 
+               students[i].roll, students[i].name, students[i].marks);
     }
-
-    if (f == 0)
-        printf("It is prime\n");
-    else
-        printf("It is not prime\n");
 
     return 0;
 }
