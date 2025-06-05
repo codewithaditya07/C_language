@@ -131,24 +131,45 @@
 // }
 
 // 6. Gross & Net Salary Calculation using Structure
+// #include <stdio.h>
+
+// struct Salary {
+//     float basic, ta, da, hra, deductions;
+// };
+
+// int main() {
+//     struct Salary emp;
+//     float gross, net;
+
+//     printf("Enter Basic, TA, DA, HRA, Deductions:\n");
+//     scanf("%f%f%f%f%f", &emp.basic, &emp.ta, &emp.da, &emp.hra, &emp.deductions);
+
+//     gross = emp.basic + emp.ta + emp.da + emp.hra;
+//     net = gross - emp.deductions;
+
+//     printf("Gross Salary = %.2f\n", gross);
+//     printf("Net Salary = %.2f\n", net);
+
+//     return 0;
+// }
+
+// 7. Swapping Two Numbers using Pointers
 #include <stdio.h>
 
-struct Salary {
-    float basic, ta, da, hra, deductions;
-};
+void swap(int *a, int *b) {
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
 
 int main() {
-    struct Salary emp;
-    float gross, net;
+    int x, y;
+    printf("Enter two numbers: ");
+    scanf("%d%d", &x, &y);
 
-    printf("Enter Basic, TA, DA, HRA, Deductions:\n");
-    scanf("%f%f%f%f%f", &emp.basic, &emp.ta, &emp.da, &emp.hra, &emp.deductions);
-
-    gross = emp.basic + emp.ta + emp.da + emp.hra;
-    net = gross - emp.deductions;
-
-    printf("Gross Salary = %.2f\n", gross);
-    printf("Net Salary = %.2f\n", net);
+    printf("Before Swap: x = %d, y = %d\n", x, y);
+    swap(&x, &y);
+    printf("After Swap: x = %d, y = %d\n", x, y);
 
     return 0;
 }
