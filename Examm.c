@@ -154,22 +154,36 @@
 // }
 
 // 7. Swapping Two Numbers using Pointers
+// #include <stdio.h>
+
+// void swap(int *a, int *b) {
+//     int temp = *a;
+//     *a = *b;
+//     *b = temp;
+// }
+
+// int main() {
+//     int x, y;
+//     printf("Enter two numbers: ");
+//     scanf("%d%d", &x, &y);
+
+//     printf("Before Swap: x = %d, y = %d\n", x, y);
+//     swap(&x, &y);
+//     printf("After Swap: x = %d, y = %d\n", x, y);
+
+//     return 0;
+// }
+
+// Q1. (10 Marks) Write a recursive function to calculate the factorial of a number.
 #include <stdio.h>
-
-void swap(int *a, int *b) {
-    int temp = *a;
-    *a = *b;
-    *b = temp;
+int factorial(int n) {
+    if (n <= 1) return 1;
+    return n * factorial(n - 1);
 }
-
 int main() {
-    int x, y;
-    printf("Enter two numbers: ");
-    scanf("%d%d", &x, &y);
-
-    printf("Before Swap: x = %d, y = %d\n", x, y);
-    swap(&x, &y);
-    printf("After Swap: x = %d, y = %d\n", x, y);
-
+    int num;
+    printf("Enter number: ");
+    scanf("%d", &num);
+    printf("Factorial: %d\n", factorial(num));
     return 0;
 }
