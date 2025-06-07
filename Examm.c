@@ -175,15 +175,37 @@
 // }
 
 // Q1. (10 Marks) Write a recursive function to calculate the factorial of a number.
+// #include <stdio.h>
+// int factorial(int n) {
+//     if (n <= 1) return 1;
+//     return n * factorial(n - 1);
+// }
+// int main() {
+//     int num;
+//     printf("Enter number: ");
+//     scanf("%d", &num);
+//     printf("Factorial: %d\n", factorial(num));
+//     return 0;
+// }
+
+// Q2. (10 Marks) Check whether a string is a palindrome using pointers.
 #include <stdio.h>
-int factorial(int n) {
-    if (n <= 1) return 1;
-    return n * factorial(n - 1);
+#include <string.h>
+
+int isPalindrome(char *str) {
+    char *end = str + strlen(str) - 1;
+    while (str < end) {
+        if (*str != *end) return 0;
+        str++;
+        end--;
+    }
+    return 1;
 }
 int main() {
-    int num;
-    printf("Enter number: ");
-    scanf("%d", &num);
-    printf("Factorial: %d\n", factorial(num));
+    char str[100];
+    printf("Enter string: ");
+    scanf("%s", str);
+    if (isPalindrome(str)) printf("Palindrome\n");
+    else printf("Not Palindrome\n");
     return 0;
 }
