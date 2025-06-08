@@ -189,23 +189,42 @@
 // }
 
 // Q2. (10 Marks) Check whether a string is a palindrome using pointers.
-#include <stdio.h>
-#include <string.h>
+// #include <stdio.h>
+// #include <string.h>
 
-int isPalindrome(char *str) {
-    char *end = str + strlen(str) - 1;
-    while (str < end) {
-        if (*str != *end) return 0;
-        str++;
-        end--;
-    }
-    return 1;
-}
+// int isPalindrome(char *str) {
+//     char *end = str + strlen(str) - 1;
+//     while (str < end) {
+//         if (*str != *end) return 0;
+//         str++;
+//         end--;
+//     }
+//     return 1;
+// }
+// int main() {
+//     char str[100];
+//     printf("Enter string: ");
+//     scanf("%s", str);
+//     if (isPalindrome(str)) printf("Palindrome\n");
+//     else printf("Not Palindrome\n");
+//     return 0;
+// }
+
+// Q3. (10 Marks) Copy contents from one file to another.
+#include <stdio.h>
+
 int main() {
-    char str[100];
-    printf("Enter string: ");
-    scanf("%s", str);
-    if (isPalindrome(str)) printf("Palindrome\n");
-    else printf("Not Palindrome\n");
+    FILE *f1, *f2;
+    char ch;
+    f1 = fopen("input.txt", "r");
+    f2 = fopen("output.txt", "w");
+    if (!f1 || !f2) {
+        printf("File Error\n");
+        return 1;
+    }
+    while ((ch = fgetc(f1)) != EOF) fputc(ch, f2);
+    printf("File copied successfully.\n");
+    fclose(f1);
+    fclose(f2);
     return 0;
 }
