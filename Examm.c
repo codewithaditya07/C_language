@@ -211,20 +211,44 @@
 // }
 
 // Q3. (10 Marks) Copy contents from one file to another.
-#include <stdio.h>
+// #include <stdio.h>
 
+// int main() {
+//     FILE *f1, *f2;
+//     char ch;
+//     f1 = fopen("input.txt", "r");
+//     f2 = fopen("output.txt", "w");
+//     if (!f1 || !f2) {
+//         printf("File Error\n");
+//         return 1;
+//     }
+//     while ((ch = fgetc(f1)) != EOF) fputc(ch, f2);
+//     printf("File copied successfully.\n");
+//     fclose(f1);
+//     fclose(f2);
+//     return 0;
+// }
+
+// Q4. (10 Marks) Multiply two 3x3 matrices.
+#include <stdio.h>
 int main() {
-    FILE *f1, *f2;
-    char ch;
-    f1 = fopen("input.txt", "r");
-    f2 = fopen("output.txt", "w");
-    if (!f1 || !f2) {
-        printf("File Error\n");
-        return 1;
+    int a[3][3], b[3][3], c[3][3], i, j, k;
+    printf("Enter Matrix A:\n");
+    for (i = 0; i < 3; i++) for (j = 0; j < 3; j++) scanf("%d", &a[i][j]);
+    printf("Enter Matrix B:\n");
+    for (i = 0; i < 3; i++) for (j = 0; j < 3; j++) scanf("%d", &b[i][j]);
+
+    for (i = 0; i < 3; i++)
+        for (j = 0; j < 3; j++) {
+            c[i][j] = 0;
+            for (k = 0; k < 3; k++)
+                c[i][j] += a[i][k] * b[k][j];
+        }
+
+    printf("Result:\n");
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 3; j++) printf("%d ", c[i][j]);
+        printf("\n");
     }
-    while ((ch = fgetc(f1)) != EOF) fputc(ch, f2);
-    printf("File copied successfully.\n");
-    fclose(f1);
-    fclose(f2);
     return 0;
 }
