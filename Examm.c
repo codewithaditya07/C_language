@@ -254,13 +254,51 @@
 // }
 
 // Q5. (10 Marks) Find string length without using strlen().
+// #include <stdio.h>
+// int main() {
+//     char str[100];
+//     int len = 0;
+//     printf("Enter string: ");
+//     scanf("%s", str);
+//     while (str[len] != '\0') len++;
+//     printf("Length = %d\n", len);
+//     return 0;
+// }
+
+// Q6. (10 Marks) Swap two numbers using pointers.
+// #include <stdio.h>
+// void swap(int *x, int *y) {
+//     int temp = *x;
+//     *x = *y;
+//     *y = temp;
+// }
+// int main() {
+//     int a, b;
+//     printf("Enter two numbers: ");
+//     scanf("%d%d", &a, &b);
+//     printf("Before swap: %d %d\n", a, b);
+//     swap(&a, &b);
+//     printf("After swap: %d %d\n", a, b);
+//     return 0;
+// }
+
+// Q7. (10 Marks) Create a structure for student marks and calculate average.
 #include <stdio.h>
+struct Student {
+    int roll;
+    float marks[5];
+};
 int main() {
-    char str[100];
-    int len = 0;
-    printf("Enter string: ");
-    scanf("%s", str);
-    while (str[len] != '\0') len++;
-    printf("Length = %d\n", len);
+    struct Student s;
+    float total = 0, avg;
+    printf("Enter roll number: ");
+    scanf("%d", &s.roll);
+    printf("Enter marks for 5 subjects: ");
+    for (int i = 0; i < 5; i++) {
+        scanf("%f", &s.marks[i]);
+        total += s.marks[i];
+    }
+    avg = total / 5;
+    printf("Roll: %d, Average: %.2f\n", s.roll, avg);
     return 0;
 }
