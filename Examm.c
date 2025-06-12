@@ -283,22 +283,39 @@
 // }
 
 // Q7. (10 Marks) Create a structure for student marks and calculate average.
+// #include <stdio.h>
+// struct Student {
+//     int roll;
+//     float marks[5];
+// };
+// int main() {
+//     struct Student s;
+//     float total = 0, avg;
+//     printf("Enter roll number: ");
+//     scanf("%d", &s.roll);
+//     printf("Enter marks for 5 subjects: ");
+//     for (int i = 0; i < 5; i++) {
+//         scanf("%f", &s.marks[i]);
+//         total += s.marks[i];
+//     }
+//     avg = total / 5;
+//     printf("Roll: %d, Average: %.2f\n", s.roll, avg);
+//     return 0;
+// }
+
+// Q8. (10 Marks) Print pattern using loops
+// Pattern:  
+// 1  
+// 1 2  
+// 1 2 3  
+// 1 2 3 4
+// 1 2 3 4 5
 #include <stdio.h>
-struct Student {
-    int roll;
-    float marks[5];
-};
 int main() {
-    struct Student s;
-    float total = 0, avg;
-    printf("Enter roll number: ");
-    scanf("%d", &s.roll);
-    printf("Enter marks for 5 subjects: ");
-    for (int i = 0; i < 5; i++) {
-        scanf("%f", &s.marks[i]);
-        total += s.marks[i];
+    for (int i = 1; i <= 5; i++) {
+        for (int j = 1; j <= i; j++)
+            printf("%d ", j);
+        printf("\n");
     }
-    avg = total / 5;
-    printf("Roll: %d, Average: %.2f\n", s.roll, avg);
     return 0;
 }
