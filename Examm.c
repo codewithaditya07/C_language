@@ -310,12 +310,31 @@
 // 1 2 3  
 // 1 2 3 4
 // 1 2 3 4 5
+// #include <stdio.h>
+// int main() {
+//     for (int i = 1; i <= 5; i++) {
+//         for (int j = 1; j <= i; j++)
+//             printf("%d ", j);
+//         printf("\n");
+//     }
+//     return 0;
+// }
+
+// Q9. (10 Marks) Linear search in an array
 #include <stdio.h>
 int main() {
-    for (int i = 1; i <= 5; i++) {
-        for (int j = 1; j <= i; j++)
-            printf("%d ", j);
-        printf("\n");
+    int arr[10], n, key, found = 0;
+    printf("Enter 10 elements:\n");
+    for (int i = 0; i < 10; i++) scanf("%d", &arr[i]);
+    printf("Enter number to search: ");
+    scanf("%d", &key);
+    for (int i = 0; i < 10; i++) {
+        if (arr[i] == key) {
+            printf("Found at position %d\n", i + 1);
+            found = 1;
+            break;
+        }
     }
+    if (!found) printf("Not found\n");
     return 0;
 }
