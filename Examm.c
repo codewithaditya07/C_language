@@ -321,20 +321,42 @@
 // }
 
 // Q9. (10 Marks) Linear search in an array
+// #include <stdio.h>
+// int main() {
+//     int arr[10], n, key, found = 0;
+//     printf("Enter 10 elements:\n");
+//     for (int i = 0; i < 10; i++) scanf("%d", &arr[i]);
+//     printf("Enter number to search: ");
+//     scanf("%d", &key);
+//     for (int i = 0; i < 10; i++) {
+//         if (arr[i] == key) {
+//             printf("Found at position %d\n", i + 1);
+//             found = 1;
+//             break;
+//         }
+//     }
+//     if (!found) printf("Not found\n");
+//     return 0;
+// }
+
+// Q10. (10 Marks) Macro to find max of 3 numbers
 #include <stdio.h>
+#define MAX3(x, y, z) ((x > y && x > z) ? x : (y > z ? y : z))
+
 int main() {
-    int arr[10], n, key, found = 0;
-    printf("Enter 10 elements:\n");
-    for (int i = 0; i < 10; i++) scanf("%d", &arr[i]);
-    printf("Enter number to search: ");
-    scanf("%d", &key);
-    for (int i = 0; i < 10; i++) {
-        if (arr[i] == key) {
-            printf("Found at position %d\n", i + 1);
-            found = 1;
-            break;
-        }
-    }
-    if (!found) printf("Not found\n");
+    int a, b, c;
+    printf("Enter 3 numbers: ");
+    scanf("%d%d%d", &a, &b, &c);
+    printf("Maximum = %d\n", MAX3(a, b, c));
     return 0;
 }
+
+
+
+
+
+
+
+
+
+
