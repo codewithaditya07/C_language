@@ -651,38 +651,70 @@
 // What is a structure ? Explain how a 10 structure is declared in C. Write a program
 // in C using structure to store records of students in a class of 20 students.
 
+// #include <stdio.h>
+
+// #define SIZE 20
+
+// // Define the structure
+// struct Student {
+//     int roll;
+//     char name[50];
+//     float marks;
+// };
+
+// int main() {
+//     struct Student students[SIZE];
+
+//     // Input student details
+//     printf("Enter details of %d students:\n", SIZE);
+//     for (int i = 0; i < SIZE; i++) {
+//         printf("\nStudent %d:\n", i + 1);
+//         printf("Enter roll number: ");
+//         scanf("%d", &students[i].roll);
+//         printf("Enter name: ");
+//         scanf(" %[^\n]", students[i].name);  // Read string with spaces
+//         printf("Enter marks: ");
+//         scanf("%f", &students[i].marks);
+//     }
+
+//     // Display student details
+//     printf("\n---- Student Records ----\n");
+//     for (int i = 0; i < SIZE; i++) {
+//         printf("Roll: %d, Name: %s, Marks: %.2f\n", 
+//                students[i].roll, students[i].name, students[i].marks);
+//     }
+
+//     return 0;
+// }
+
+// Write a program using pointers, to swap the values of 2 variables.
 #include <stdio.h>
 
-#define SIZE 20
-
-// Define the structure
-struct Student {
-    int roll;
-    char name[50];
-    float marks;
-};
+// Function to swap values using pointers
+void swap(int *a, int *b) {
+    int temp;
+    temp = *a;
+    *a = *b;
+    *b = temp;
+}
 
 int main() {
-    struct Student students[SIZE];
+    int x, y;
 
-    // Input student details
-    printf("Enter details of %d students:\n", SIZE);
-    for (int i = 0; i < SIZE; i++) {
-        printf("\nStudent %d:\n", i + 1);
-        printf("Enter roll number: ");
-        scanf("%d", &students[i].roll);
-        printf("Enter name: ");
-        scanf(" %[^\n]", students[i].name);  // Read string with spaces
-        printf("Enter marks: ");
-        scanf("%f", &students[i].marks);
-    }
+    // Input values
+    printf("Enter the value of x: ");
+    scanf("%d", &x);
+    printf("Enter the value of y: ");
+    scanf("%d", &y);
 
-    // Display student details
-    printf("\n---- Student Records ----\n");
-    for (int i = 0; i < SIZE; i++) {
-        printf("Roll: %d, Name: %s, Marks: %.2f\n", 
-               students[i].roll, students[i].name, students[i].marks);
-    }
+    // Display values before swapping
+    printf("\nBefore swapping: x = %d, y = %d\n", x, y);
+
+    // Call swap function
+    swap(&x, &y);
+
+    // Display values after swapping
+    printf("After swapping: x = %d, y = %d\n", x, y);
 
     return 0;
 }
