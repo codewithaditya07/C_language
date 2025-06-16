@@ -688,33 +688,55 @@
 // }
 
 // Write a program using pointers, to swap the values of 2 variables.
+// #include <stdio.h>
+
+// // Function to swap values using pointers
+// void swap(int *a, int *b) {
+//     int temp;
+//     temp = *a;
+//     *a = *b;
+//     *b = temp;
+// }
+
+// int main() {
+//     int x, y;
+
+//     // Input values
+//     printf("Enter the value of x: ");
+//     scanf("%d", &x);
+//     printf("Enter the value of y: ");
+//     scanf("%d", &y);
+
+//     // Display values before swapping
+//     printf("\nBefore swapping: x = %d, y = %d\n", x, y);
+
+//     // Call swap function
+//     swap(&x, &y);
+
+//     // Display values after swapping
+//     printf("After swapping: x = %d, y = %d\n", x, y);
+
+//     return 0;
+// }
+
+
+// Swap Two Numbers Using Pointers
 #include <stdio.h>
 
-// Function to swap values using pointers
-void swap(int *a, int *b) {
+void swap(int *x, int *y) {
     int temp;
-    temp = *a;
-    *a = *b;
-    *b = temp;
+    temp = *x;
+    *x = *y;
+    *y = temp;
 }
 
 int main() {
-    int x, y;
+    int a, b;
+    printf("Enter two numbers: ");
+    scanf("%d %d", &a, &b);
 
-    // Input values
-    printf("Enter the value of x: ");
-    scanf("%d", &x);
-    printf("Enter the value of y: ");
-    scanf("%d", &y);
+    swap(&a, &b);
 
-    // Display values before swapping
-    printf("\nBefore swapping: x = %d, y = %d\n", x, y);
-
-    // Call swap function
-    swap(&x, &y);
-
-    // Display values after swapping
-    printf("After swapping: x = %d, y = %d\n", x, y);
-
+    printf("After swapping: a = %d, b = %d\n", a, b);
     return 0;
 }
