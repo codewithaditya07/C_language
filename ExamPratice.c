@@ -721,22 +721,49 @@
 
 
 // Swap Two Numbers Using Pointers
+// #include <stdio.h>
+
+// void swap(int *x, int *y) {
+//     int temp;
+//     temp = *x;
+//     *x = *y;
+//     *y = temp;
+// }
+
+// int main() {
+//     int a, b;
+//     printf("Enter two numbers: ");
+//     scanf("%d %d", &a, &b);
+
+//     swap(&a, &b);
+
+//     printf("After swapping: a = %d, b = %d\n", a, b);
+//     return 0;
+// }
+
+// Write C program which take a string as input and print it in reverse order, without using any in-built function.
 #include <stdio.h>
 
-void swap(int *x, int *y) {
-    int temp;
-    temp = *x;
-    *x = *y;
-    *y = temp;
-}
-
 int main() {
-    int a, b;
-    printf("Enter two numbers: ");
-    scanf("%d %d", &a, &b);
+    char str[100];
+    int length = 0, i;
 
-    swap(&a, &b);
+    // Input string
+    printf("Enter a string: ");
+    gets(str);  // Note: gets is unsafe, prefer fgets in real applications
 
-    printf("After swapping: a = %d, b = %d\n", a, b);
+    // Find length of string
+    while (str[length] != '\0') {
+        length++;
+    }
+
+    // Print string in reverse order
+    printf("Reversed string: ");
+    for (i = length - 1; i >= 0; i--) {
+        printf("%c", str[i]);
+    }
+
+    printf("\n");
+
     return 0;
 }
