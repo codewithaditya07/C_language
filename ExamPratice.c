@@ -742,28 +742,68 @@
 // }
 
 // Write C program which take a string as input and print it in reverse order, without using any in-built function.
+// #include <stdio.h>
+
+// int main() {
+//     char str[100];
+//     int length = 0, i;
+
+//     // Input string
+//     printf("Enter a string: ");
+//     gets(str);  // Note: gets is unsafe, prefer fgets in real applications
+
+//     // Find length of string
+//     while (str[length] != '\0') {
+//         length++;
+//     }
+
+//     // Print string in reverse order
+//     printf("Reversed string: ");
+//     for (i = length - 1; i >= 0; i--) {
+//         printf("%c", str[i]);
+//     }
+
+//     printf("\n");
+
+//     return 0;
+// }
+
+// Swap Program using "Pass by Value" (Will NOT swap successfully)
+// #include <stdio.h>
+
+// // Pass by Value Function
+// void swapByValue(int x, int y) {
+//     int temp = x;
+//     x = y;
+//     y = temp;
+// }
+
+// int main() {
+//     int a = 5, b = 10;
+
+//     printf("Before swap: a = %d, b = %d\n", a, b);
+//     swapByValue(a, b);
+//     printf("After swap (Pass by Value): a = %d, b = %d\n", a, b);
+
+//     return 0;
+// }
+
+// Swap Program using "Pass by Reference" (Correct swapping using pointers)
 #include <stdio.h>
 
+// Pass by Reference Function
+void swapByReference(int *x, int *y) {
+    int temp = *x;
+    *x = *y;
+    *y = temp;
+}
+
 int main() {
-    char str[100];
-    int length = 0, i;
+    int a = 5, b = 10;
 
-    // Input string
-    printf("Enter a string: ");
-    gets(str);  // Note: gets is unsafe, prefer fgets in real applications
-
-    // Find length of string
-    while (str[length] != '\0') {
-        length++;
-    }
-
-    // Print string in reverse order
-    printf("Reversed string: ");
-    for (i = length - 1; i >= 0; i--) {
-        printf("%c", str[i]);
-    }
-
-    printf("\n");
+    printf("Before swap: a = %d, b = %d\n", a, b);
+    swapByReference(&a, &b);
+    printf("After swap (Pass by Reference): a = %d, b = %d\n", a, b);
 
     return 0;
 }
