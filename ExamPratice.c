@@ -789,21 +789,57 @@
 // }
 
 // Swap Program using "Pass by Reference" (Correct swapping using pointers)
-#include <stdio.h>
+// #include <stdio.h>
 
-// Pass by Reference Function
-void swapByReference(int *x, int *y) {
-    int temp = *x;
-    *x = *y;
-    *y = temp;
-}
+// // Pass by Reference Function
+// void swapByReference(int *x, int *y) {
+//     int temp = *x;
+//     *x = *y;
+//     *y = temp;
+// }
 
-int main() {
-    int a = 5, b = 10;
+// int main() {
+//     int a = 5, b = 10;
 
-    printf("Before swap: a = %d, b = %d\n", a, b);
-    swapByReference(&a, &b);
-    printf("After swap (Pass by Reference): a = %d, b = %d\n", a, b);
+//     printf("Before swap: a = %d, b = %d\n", a, b);
+//     swapByReference(&a, &b);
+//     printf("After swap (Pass by Reference): a = %d, b = %d\n", a, b);
 
+//     return 0;
+// }
+
+// lenth str
+// #include<stdio.h>
+
+// void printstring(char arr[]);
+// int countlength(char arr []);
+
+// int main (){
+//     char name[50];
+//     fgets(name,50,stdin);
+//     printf("lenth is %d",countlength(name));
+//     return 0;
+// }
+
+// int  countlength(char arr []){
+// int count = 0;
+// for(int i = 0 ; arr[i]!='\0';i++){
+// count ++;
+// }
+// return count-1;
+// }
+
+// strlen
+#include<stdio.h>
+#include<string.h>
+
+void printstring(char arr[]);
+int countlength(char arr []);
+
+int main (){
+    char name [] = "aditya";
+    int length = strlen(name);
+    printf("lenth is %d",length);
     return 0;
 }
+
