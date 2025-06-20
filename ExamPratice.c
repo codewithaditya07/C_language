@@ -39,8 +39,6 @@
 //     return 0;
 // }
 
-
-
 // #include <stdio.h>
 
 // int main() {
@@ -73,7 +71,6 @@
 
 //     return 0;
 // }
-
 
 // #include <stdio.h>
 
@@ -118,8 +115,8 @@
 //     return 0;
 // }
 
-// Write a C program which read an array of ten integer values and search a given value in the array. If that value exist in the array
-// display its square otherwise display. “The value is missing.”
+// Write a C program which read an array of ten integer values and search a given value in the array.
+//  If that value exist in the array display its square otherwise display. “The value is missing.”
 
 // #include <stdio.h>
 
@@ -153,7 +150,6 @@
 
 //     return 0;
 // }
-
 
 // Write a C program for multiplication of two 4 × 4 matrices
 // #include <stdio.h>
@@ -312,7 +308,6 @@
 //     return 0;
 // }
 
-
 // Write a program in C, using structures to 7 generate a report for students which
 // displays Roll No. and Name of student, total marks obtained by the student. Assumptions
 // can be made wherever necessary.
@@ -425,7 +420,6 @@
 
 //     return 0;
 // }
-
 
 // What is a string ? Write a function in C to 10 convert lower case letters to upper case
 // letters in a given string without using strupp ?
@@ -541,7 +535,7 @@
 //     printf("Address stored in p = %p\n", (void*)p);
 //     printf("Address of p = %p\n", (void*)&p);
 //     printf("Address stored in pp = %p\n", (void*)pp);
-    
+
 //     return 0;
 // }
 
@@ -680,7 +674,7 @@
 //     // Display student details
 //     printf("\n---- Student Records ----\n");
 //     for (int i = 0; i < SIZE; i++) {
-//         printf("Roll: %d, Name: %s, Marks: %.2f\n", 
+//         printf("Roll: %d, Name: %s, Marks: %.2f\n",
 //                students[i].roll, students[i].name, students[i].marks);
 //     }
 
@@ -718,7 +712,6 @@
 
 //     return 0;
 // }
-
 
 // Swap Two Numbers Using Pointers
 // #include <stdio.h>
@@ -809,37 +802,36 @@
 // }
 
 // lenth str
-// #include<stdio.h>
-
-// void printstring(char arr[]);
-// int countlength(char arr []);
-
-// int main (){
-//     char name[50];
-//     fgets(name,50,stdin);
-//     printf("lenth is %d",countlength(name));
-//     return 0;
-// }
-
-// int  countlength(char arr []){
-// int count = 0;
-// for(int i = 0 ; arr[i]!='\0';i++){
-// count ++;
-// }
-// return count-1;
-// }
-
-// strlen
-#include<stdio.h>
-#include<string.h>
+#include <stdio.h>
 
 void printstring(char arr[]);
-int countlength(char arr []);
+int countlength(char arr[]);
 
-int main (){
-    char name [] = "aditya";
-    int length = strlen(name);
-    printf("lenth is %d",length);
+int main()
+{
+    char name[50];
+    fgets(name, 50, stdin);
+    printf("lenth is %d", countlength(name));
     return 0;
 }
 
+int countlength(char arr[])
+{
+    int count = 0;
+    for (int i = 0; arr[i] != '\0'; i++)
+    {
+        count++;
+    }
+    return count - 1;
+}
+
+// strlen
+// #include<stdio.h>
+// #include<string.h>
+
+// int main (){
+//     char name [] = "aditya";
+//     int length = strlen(name);
+//     printf("lenth is %d",length);
+//     return 0;
+// }
