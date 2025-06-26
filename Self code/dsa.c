@@ -94,43 +94,88 @@
 // }
 
 // 4. Stack Implementation using Array
+// #include <stdio.h>
+// #define MAX 5
+
+// int stack[MAX], top = -1;
+
+// void push(int val) {
+//     if (top == MAX - 1)
+//         printf("Stack Overflow\n");
+//     else
+//         stack[++top] = val;
+// }
+
+// void pop() {
+//     if (top == -1)
+//         printf("Stack Underflow\n");
+//     else
+//         printf("Popped element: %d\n", stack[top--]);
+// }
+
+// void display() {
+//     int i;
+//     if (top == -1)
+//         printf("Stack is empty\n");
+//     else {
+//         printf("Stack elements: ");
+//         for (i = 0; i <= top; i++)
+//             printf("%d ", stack[i]);
+//         printf("\n");
+//     }
+// }
+
+// int main() {
+//     push(10);
+//     push(20);
+//     push(30);
+//     display();
+//     pop();
+//     display();
+//     return 0;
+// }
+
+
+// 5. Queue Implementation using Array
 #include <stdio.h>
 #define MAX 5
 
-int stack[MAX], top = -1;
+int queue[MAX], front = -1, rear = -1;
 
-void push(int val) {
-    if (top == MAX - 1)
-        printf("Stack Overflow\n");
-    else
-        stack[++top] = val;
+void enqueue(int val) {
+    if (rear == MAX - 1)
+        printf("Queue Overflow\n");
+    else {
+        if (front == -1) front = 0;
+        queue[++rear] = val;
+    }
 }
 
-void pop() {
-    if (top == -1)
-        printf("Stack Underflow\n");
+void dequeue() {
+    if (front == -1 || front > rear)
+        printf("Queue Underflow\n");
     else
-        printf("Popped element: %d\n", stack[top--]);
+        printf("Dequeued element: %d\n", queue[front++]);
 }
 
 void display() {
     int i;
-    if (top == -1)
-        printf("Stack is empty\n");
+    if (front == -1 || front > rear)
+        printf("Queue is empty\n");
     else {
-        printf("Stack elements: ");
-        for (i = 0; i <= top; i++)
-            printf("%d ", stack[i]);
+        printf("Queue elements: ");
+        for (i = front; i <= rear; i++)
+            printf("%d ", queue[i]);
         printf("\n");
     }
 }
 
 int main() {
-    push(10);
-    push(20);
-    push(30);
+    enqueue(10);
+    enqueue(20);
+    enqueue(30);
     display();
-    pop();
+    dequeue();
     display();
     return 0;
 }
