@@ -158,24 +158,24 @@
 //         printf("Dequeued element: %d\n", queue[front++]);
 // }
 
-// void display() {
-//     int i;
-//     if (front == -1 || front > rear)
-//         printf("Queue is empty\n");
-//     else {
-//         printf("Queue elements: ");
-//         for (i = front; i <= rear; i++)
-//             printf("%d ", queue[i]);
-//         printf("\n");
-//     }
-// }
+void display() {
+    int i;
+    if (front == -1 || front > rear)
+        printf("Queue is empty\n");
+    else {
+        printf("Queue elements: ");
+        for (i = front; i <= rear; i++)
+            printf("%d ", queue[i]);
+        printf("\n");
+    }
+}
 
-// int main() {
-//     enqueue(10);
-//     enqueue(20);
-//     enqueue(30);
-//     display();
-//     dequeue();
-//     display();
-//     return 0;
-// }
+int main() {
+    enqueue(10);
+    enqueue(20);
+    enqueue(30);
+    display();
+    dequeue();
+    display();
+    return 0;
+}
