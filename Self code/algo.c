@@ -50,3 +50,23 @@ int main() {
     printf("\nTotal comparisons: %d\n", comparisons);
     return 0;
 }
+
+// 3. Linear Search
+#include <stdio.h>
+
+int main() {
+    int arr[] = {9, 15, 22, 5, 4, 25, 28};
+    int i, x = 28, found = 0;
+
+    for (i = 0; i < 7; i++) {
+        if (arr[i] == x) {
+            found = 1;
+            printf("Element %d found at index %d\n", x, i);
+            break;
+        }
+    }
+
+    if (!found)
+        printf("Element not found.\n");
+    return 0;
+}
