@@ -70,3 +70,28 @@ int main() {
         printf("Element not found.\n");
     return 0;
 }
+
+// 4. Binary Search
+#include <stdio.h>
+
+int main() {
+    int arr[] = {5, 10, 15, 20, 22, 27, 30, 35};
+    int low = 0, high = 7, mid, x = 22, comparisons = 0;
+
+    while (low <= high) {
+        comparisons++;
+        mid = (low + high) / 2;
+        if (arr[mid] == x) {
+            printf("Element %d found at index %d\n", x, mid);
+            printf("Comparisons: %d\n", comparisons);
+            return 0;
+        } else if (arr[mid] < x) {
+            low = mid + 1;
+        } else {
+            high = mid - 1;
+        }
+    }
+
+    printf("Element not found.\n");
+    return 0;
+}
