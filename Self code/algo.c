@@ -159,13 +159,13 @@ int main() {
     int i, len = strlen(str);
     char temp;
 
-    for (i = 0; i < len / 2; i++) {
-        temp = str[i];
-        str[i] = str[len - i - 1];
-        str[len - i - 1] = temp;
-    }
+//     for (i = 0; i < len / 2; i++) {
+//         temp = str[i];
+//         str[i] = str[len - i - 1];
+//         str[len - i - 1] = temp;
+//     }
 
-    printf("Reversed string: %s\n", str);
-    return 0;
-}
+//     printf("Reversed string: %s\n", str);
+//     return 0;
+// }
 
