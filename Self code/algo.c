@@ -169,3 +169,21 @@ int main() {
     return 0;
 }
 
+// 9. Find Maximum and Minimum in an Array
+#include <stdio.h>
+
+int main() {
+    int a[] = {5, 10, 15, 4, 3, 20, 25};
+    int i, max = a[0], min = a[0];
+
+    for (i = 1; i < 7; i++) {
+        if (a[i] > max)
+            max = a[i];
+        if (a[i] < min)
+            min = a[i];
+    }
+
+    printf("Maximum: %d\n", max);
+    printf("Minimum: %d\n", min);
+    return 0;
+}
