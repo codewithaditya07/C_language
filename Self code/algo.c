@@ -217,3 +217,21 @@ int main() {
     printf("Sum = %d\nAverage = %.2f\n", sum, avg);
     return 0;
 }
+
+// 12. Copy One String to Another
+#include <stdio.h>
+
+int main() {
+    char src[] = "IGNOU";
+    char dest[100];
+    int i = 0;
+
+    while (src[i] != '\0') {
+        dest[i] = src[i];
+        i++;
+    }
+    dest[i] = '\0';
+
+    printf("Copied string: %s\n", dest);
+    return 0;
+}
