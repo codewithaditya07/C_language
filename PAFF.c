@@ -79,7 +79,7 @@ int main()
 // factorial
 // #include <stdio.h>
 // int main()
-// {
+// {  
 //     int x, y, f = 1;
 
 //     printf("enter any number ");
