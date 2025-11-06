@@ -141,3 +141,41 @@
 
 //     return 0;
 // }
+
+#include <stdio.h>
+
+// Function to check if a number is prime
+int isPrime(int num) {
+    if (num <= 1)
+        return 0; // Not prime
+    for (int i = 2; i <= num / 2; i++) {
+        if (num % i == 0)
+            return 0; // Not prime
+    }
+    return 1; // Prime
+}
+
+// Function to display prime numbers between two intervals
+void printPrimes(int lower, int upper) {
+    printf("Prime numbers between %d and %d are:\n", lower, upper);
+    for (int i = lower; i <= upper; i++) {
+        if (isPrime(i))
+            printf("%d ", i);
+    }
+    printf("\n");
+}
+
+int main() {
+    int lower, upper;
+
+    // Taking input from user
+    printf("Enter lower interval: ");
+    scanf("%d", &lower);
+    printf("Enter upper interval: ");
+    scanf("%d", &upper);
+
+    // Function call to print primes
+    printPrimes(lower, upper);
+
+    return 0;
+}
