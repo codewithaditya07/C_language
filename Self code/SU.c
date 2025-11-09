@@ -165,17 +165,17 @@ void printPrimes(int lower, int upper) {
     printf("\n");
 }
 
-int main() {
-    int lower, upper;
+// int main() {
+//     int lower, upper;
 
-    // Taking input from user
-    printf("Enter lower interval: ");
-    scanf("%d", &lower);
-    printf("Enter upper interval: ");
-    scanf("%d", &upper);
+//     // Taking input from user
+//     printf("Enter lower interval: ");
+//     scanf("%d", &lower);
+//     printf("Enter upper interval: ");
+//     scanf("%d", &upper);
 
-    // Function call to print primes
-    printPrimes(lower, upper);
+//     // Function call to print primes
+//     printPrimes(lower, upper);
 
-    return 0;
+//     return 0;
 }
