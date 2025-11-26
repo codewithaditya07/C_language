@@ -802,28 +802,28 @@
 // }
 
 // lenth str
-#include <stdio.h>
+// #include <stdio.h>
 
-void printstring(char arr[]);
-int countlength(char arr[]);
+// void printstring(char arr[]);
+// int countlength(char arr[]);
 
-int main()
-{
-    char name[50];
-    fgets(name, 50, stdin);
-    printf("lenth is %d", countlength(name));
-    return 0;
-}
+// int main()
+// {
+//     char name[50];
+//     fgets(name, 50, stdin);
+//     printf("lenth is %d", countlength(name));
+//     return 0;
+// }
 
-int countlength(char arr[])
-{
-    int count = 0;
-    for (int i = 0; arr[i] != '\0'; i++)
-    {
-        count++;
-    }
-    return count - 1;
-}
+// int countlength(char arr[])
+// {
+//     int count = 0;
+//     for (int i = 0; arr[i] != '\0'; i++)
+//     {
+//         count++;
+//     }
+//     return count - 1;
+// }
 
 // strlen
 // #include<stdio.h>
@@ -835,3 +835,126 @@ int countlength(char arr[])
 //     printf("lenth is %d",length);
 //     return 0;
 // }
+
+// Write a c program to swap two values using pointers
+
+// #include<stdio.h>
+
+// void swap(int *a,int *b){
+//     int temp = *a;
+//     *a = *b;
+//     *b = temp;
+// }
+// int main(){
+//     int x,y;
+
+//     printf("enter 1st no ");
+//     scanf("%d",&x);
+
+//     printf("enter 2st no ");
+//     scanf("%d",&y);
+
+//     printf("before swaping : x = %d , y = %d\n",x,y);
+
+//     swap(&x,&y);
+
+//     printf("after swapping : x = %d,y = %d\n",x,y);
+
+//     return 0;
+// }
+
+// WAP to sort an array using bubble sort
+
+// #include <stdio.h>
+// int main()
+// {
+//     int n, i, j, temp;
+
+//     printf("enter number of element :");
+//     scanf("%d", &n);
+
+//     int arr[n];
+
+//     printf("enter %d element:\n", n);
+//     for (i = 0; i < n; i++)
+//     {
+//         scanf("%d", &arr[i]);
+//     }
+
+//     for (i = 0; i < n - 1; i++)
+//     {
+//         for (j = 0; j < n - i - 1; j++)
+//         {
+//             if (arr[j] > arr[j + 1])
+//             {
+//                 temp = arr[j];
+//                 arr[j] = arr[j + 1];
+//                 arr[j + 1] = temp;
+//             }
+//         }
+//     }
+//     printf("sorted array : ");
+//     for (i = 0; i < n; i++)
+//     {
+//         printf("%d ", arr[i]);
+//     }
+//     return 0;
+// }
+
+// Write a c program to find the largest element of the array
+// #include<stdio.h>
+// int main(){
+//     int n, i ;
+
+//     printf("enter elemt : ");
+//     scanf("%d",&n);
+
+//     int arr[n];
+
+//     printf("enter %d elemt: ",n);
+//     for(i=0;i<n;i++){
+//         scanf("%d",&arr[i]);
+//     }
+
+//     int max =arr[0];
+
+//     for(i=0;i<n;i++){
+//         if(arr[i]> max){
+//             max = arr[i];
+//         }
+//     }
+
+//     printf("largest elemt = %d\n",max);
+
+//     return 0;
+    
+// }
+
+// Write a c program to find largest number from array using pointers
+ #include<stdio.h>
+
+ int main(){
+    int n,i;
+
+    printf("enter no ");
+    scanf("%d",&n);
+
+    int arr[n];
+    int *p = arr;
+
+    printf("enter %d no ",n);
+    for(i=0;i<n;i++){
+        scanf("%d",(p+i));
+    }
+
+    int max = *p;
+
+    for(i=0;i<n;i++){
+        if(*(p+i)>max){
+            max = *(p+i);
+        }
+    }
+    printf("lagest no = %d \n",max);
+
+    return 0;
+ }
