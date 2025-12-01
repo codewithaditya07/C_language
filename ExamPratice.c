@@ -937,24 +937,24 @@
     int n,i;
 
     printf("enter no ");
-//     scanf("%d",&n);
+    scanf("%d",&n);
 
-//     int arr[n];
-//     int *p = arr;
+    int arr[n];
+    int *p = arr;
 
-//     printf("enter %d no ",n);
-//     for(i=0;i<n;i++){
-//         scanf("%d",(p+i));
-//     }
+    printf("enter %d no ",n);
+    for(i=0;i<n;i++){
+        scanf("%d",(p+i));
+    }
 
-//     int max = *p;
+    int max = *p;
 
-//     for(i=0;i<n;i++){
-//         if(*(p+i)>max){
-//             max = *(p+i);
-//         }
-//     }
-//     printf("lagest no = %d \n",max);
+    for(i=0;i<n;i++){
+        if(*(p+i)>max){
+            max = *(p+i);
+        }
+    }
+    printf("lagest no = %d \n",max);
 
-//     return 0;
-//  }
+    return 0;
+ }
