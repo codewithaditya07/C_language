@@ -7,7 +7,7 @@
 #include<stdio.h>
 int main(){
 int x,y,r,s=0;
-printf("eneter any number ");
+printf("enter any number ");
 scanf("%d",&x);
 
 for(y=x;y>0;)
