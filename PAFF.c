@@ -29,30 +29,30 @@ int main()
     return 0;
 }
 // ARMSTRONG NUMBER IN WHILE LOOP
-/*#include<stdio.h>
-int main (){
-    int x,y,r,s=0;
-    printf("enter any number ");
-    scanf("%d",&x);
-    y=x;
-    while (y>0)
-    {
-        r=y%10;
-        s=s+r*r*r;
-        y=y/10;
-    }
-    if (s==x)
-    {
-        printf("it is Armstrong number ");
-    }
-    else
-    {
-        printf("it is not Armstrong number");
-    }
+// /*#include<stdio.h>
+// int main (){
+//     int x,y,r,s=0;
+//     printf("enter any number ");
+//     scanf("%d",&x);
+//     y=x;
+//     while (y>0)
+//     {
+//         r=y%10;
+//         s=s+r*r*r;
+//         y=y/10;
+//     }
+//     if (s==x)
+//     {
+//         printf("it is Armstrong number ");
+//     }
+//     else
+//     {
+//         printf("it is not Armstrong number");
+//     }
 
 
-    return 0;
-}*/
+//     return 0;
+// }*/
 /*FABONACCI SERIES IN WHILE LOOP
 #include<stdio.h>
 int main()
